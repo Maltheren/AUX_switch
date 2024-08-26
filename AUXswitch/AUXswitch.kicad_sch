@@ -499,7 +499,7 @@
 				)
 			)
 		)
-		(symbol "Connector_Generic:Conn_02x04_Counter_Clockwise"
+		(symbol "Connector_Generic:Conn_02x04_Odd_Even"
 			(pin_names
 				(offset 1.016) hide)
 			(exclude_from_sim no)
@@ -513,7 +513,7 @@
 					)
 				)
 			)
-			(property "Value" "Conn_02x04_Counter_Clockwise"
+			(property "Value" "Conn_02x04_Odd_Even"
 				(at 1.27 -7.62 0)
 				(effects
 					(font
@@ -539,7 +539,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -566,7 +566,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_02x04_Counter_Clockwise_1_1"
+			(symbol "Conn_02x04_Odd_Even_1_1"
 				(rectangle
 					(start -1.27 -4.953)
 					(end 0 -5.207)
@@ -685,7 +685,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at 7.62 2.54 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -703,7 +703,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -721,7 +721,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -5.08 0)
+					(at 7.62 0 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -739,7 +739,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -5.08 180)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_5"
 						(effects
@@ -775,7 +775,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 0 180)
+					(at -5.08 -5.08 0)
 					(length 3.81)
 					(name "Pin_7"
 						(effects
@@ -793,7 +793,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 2.54 180)
+					(at 7.62 -5.08 180)
 					(length 3.81)
 					(name "Pin_8"
 						(effects
@@ -3442,9 +3442,9 @@
 			)
 		)
 	)
-	(global_label "GPIO_2"
-		(shape tri_state)
-		(at 36.83 68.58 180)
+	(global_label "AUX_pin"
+		(shape input)
+		(at 36.83 66.04 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3452,9 +3452,9 @@
 			)
 			(justify right)
 		)
-		(uuid "358c8489-dd9f-4eb2-9f2d-73b9183488ce")
+		(uuid "3468da6a-dd5a-4a82-b450-942b7f74214c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.0811 68.58 0)
+			(at 26.3458 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3526,28 +3526,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "GPIO_0"
-		(shape tri_state)
-		(at 36.83 66.04 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "545fc72d-b9ab-4bad-970e-ba2a163ed4a4")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 26.0811 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -3900,6 +3878,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "AMP_pin"
+		(shape input)
+		(at 36.83 68.58 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f310f8b2-8dec-48e7-a776-e712aab5ebb7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 26.1644 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -4286,6 +4286,92 @@
 			(project "AUXswitch"
 				(path "/7255cffd-f453-43ae-9590-faecbea73a74"
 					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x04_Odd_Even")
+		(at 41.91 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1e5b82b3-3973-4899-b0ab-e0b28056f4b2")
+		(property "Reference" "J1"
+			(at 43.18 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_02x04_Odd_Even"
+			(at 43.18 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
+			(at 41.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 41.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 41.91 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7bfda085-172a-4f8f-96e5-49d6cc9e5645")
+		)
+		(pin "8"
+			(uuid "a0d4ab7c-4ca5-4cd1-9d5a-b76271c8bcdb")
+		)
+		(pin "2"
+			(uuid "caebd906-fad4-4f64-be1a-9c94f6073100")
+		)
+		(pin "6"
+			(uuid "144b8599-37ee-49e2-904f-818d0a149102")
+		)
+		(pin "5"
+			(uuid "1e3edd15-1ed8-4526-bb77-ad40c581de0b")
+		)
+		(pin "4"
+			(uuid "40b15cc9-cce3-431c-a04b-cb3a2d9b5607")
+		)
+		(pin "3"
+			(uuid "6eb5daa4-4541-4a1a-816f-f6b0e3ca3db8")
+		)
+		(pin "7"
+			(uuid "3bc06ce0-e5d5-46a7-8720-901eb87a7871")
+		)
+		(instances
+			(project ""
+				(path "/7255cffd-f453-43ae-9590-faecbea73a74"
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -6322,92 +6408,6 @@
 			(project ""
 				(path "/7255cffd-f453-43ae-9590-faecbea73a74"
 					(reference "J10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Counter_Clockwise")
-		(at 41.91 66.04 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "dbe0b117-0a75-442b-b5c8-8550ce389deb")
-		(property "Reference" "J1"
-			(at 43.18 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x04_Counter_Clockwise"
-			(at 43.18 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical"
-			(at 41.91 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 41.91 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x04, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 41.91 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "7"
-			(uuid "fbc309f6-ba30-4c32-ac65-7a850901ac98")
-		)
-		(pin "2"
-			(uuid "f4de1b9b-26d9-4c55-b675-286bd0ccfc57")
-		)
-		(pin "6"
-			(uuid "9fabf602-7c2a-466b-9d08-2df0f4827776")
-		)
-		(pin "8"
-			(uuid "4f763d2c-2823-4c55-ab60-356bc67a8305")
-		)
-		(pin "3"
-			(uuid "98e12c02-7970-48cd-af6a-d476892dee17")
-		)
-		(pin "4"
-			(uuid "d3de994e-1f33-4909-8181-25afc421ad8b")
-		)
-		(pin "1"
-			(uuid "9859ecae-13de-4bbe-8333-0e88e65aaa5b")
-		)
-		(pin "5"
-			(uuid "002754a7-2482-4900-9f02-b3912886f6bf")
-		)
-		(instances
-			(project ""
-				(path "/7255cffd-f453-43ae-9590-faecbea73a74"
-					(reference "J1")
 					(unit 1)
 				)
 			)
